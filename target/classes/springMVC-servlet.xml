@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:component-scan base-package="cn.chile.handler" ></context:component-scan>
+
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
+
+    <!-- mvc注解驱动(不仅包括注解映射器/注解适配器,还有其他的一些配置) -->
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+    <!-- 配置模型视图解析器 -->
+    <!-- 即为模型视图名称添加前后缀 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/" />
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <!-- 映射页面 -->
+    <mvc:view-controller path="/" view-name="home/index" />
+    <mvc:view-controller path="/index" view-name="home/index" />
+    <mvc:view-controller path="/footer" view-name="home/footer" />
+    <mvc:view-controller path="/header" view-name="home/header" />
+    <mvc:view-controller path="/menu" view-name="home/tree" />
+    <mvc:view-controller path="/welcome" view-name="home/welcome" />
+
+
+</beans>
