@@ -1,2 +1,2 @@
-# crm-template
-crm template for xml files.
+# template
+template for springMVC web project.
