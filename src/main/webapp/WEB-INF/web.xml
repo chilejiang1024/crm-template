@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://java.sun.com/xml/ns/javaee"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         id="WebApp_ID" version="2.5">
-  <display-name>Archetype Created Web Application</display-name>
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
 
-  <!--默认的首页-->
-  <welcome-file-list>
-    <welcome-file>index</welcome-file>
-  </welcome-file-list>
+    <display-name>Archetype Created Web Application</display-name>
 
-  <!-- The front controller of this Spring Web application, responsible for handling all application requests -->
-  <servlet>
-    <servlet-name>springMVC</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-    <!-- 配置springMVC-servlet.xml文件的路径 -->
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>
-        classpath:springMVC-servlet.xml
-        classpath:spring/spring-service.xml
-        classpath:spring/spring-dao.xml
-      </param-value>
+    <!--默认的首页-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 
-    </init-param>
-  </servlet>
+    <!-- The front controller of this Spring Web application, responsible for handling all application requests -->
+    <servlet>
+        <servlet-name>springMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <!-- 配置springMVC-servlet.xml文件的路径 -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                classpath:springMVC-servlet.xml
+                classpath:spring/spring-service.xml
+                classpath:spring/spring-dao.xml
+            </param-value>
 
-  <!-- Map all requests to the DispatcherServlet for handling -->
-  <servlet-mapping>
-    <servlet-name>springMVC</servlet-name>
-    <url-pattern>/</url-pattern> <!-- 所有的访问url都由springMVC解析 -->
-  </servlet-mapping>
+        </init-param>
+    </servlet>
+
+    <!-- Map all requests to the DispatcherServlet for handling -->
+    <servlet-mapping>
+        <servlet-name>springMVC</servlet-name>
+        <url-pattern>/</url-pattern> <!-- 所有的访问url都由springMVC解析 -->
+    </servlet-mapping>
 
 </web-app>
