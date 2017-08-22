@@ -5,7 +5,7 @@
 
 
 <mapper namespace="cn.chile.mapper.UserMapper">
-    <select id="selectUserByUsername" parameterType="String" resultType="cn.chile.entity.User">
+    <select id="selectUserByUsername" parameterType="String" resultType="cn.chile.bean.User">
         SELECT * FROM users WHERE name = #{username}
     </select>
 </mapper>

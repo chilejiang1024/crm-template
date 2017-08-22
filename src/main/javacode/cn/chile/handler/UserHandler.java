@@ -1,18 +1,13 @@
 package cn.chile.handler;
 
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpServletRequest;
 
-import cn.chile.entity.User;
+import cn.chile.bean.User;
 import cn.chile.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.Locale;
 
 /**
  * Created by chile on 2016/10/29.

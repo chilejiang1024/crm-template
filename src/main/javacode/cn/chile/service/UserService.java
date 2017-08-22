@@ -1,9 +1,7 @@
 package cn.chile.service;
 
-import cn.chile.entity.User;
+import cn.chile.bean.User;
 import cn.chile.mapper.UserMapper;
-import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.batch.MyBatisCursorItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

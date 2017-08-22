@@ -2,11 +2,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>crm</groupId> <!-- 对应前面设置的GroupId -->
+    <groupId>springMvc-template</groupId> <!-- 对应前面设置的GroupId -->
     <artifactId>com.chile</artifactId> <!-- 前面设置的artifactId-->
     <packaging>war</packaging> <!-- 打包方式war -->
     <version>1.0-SNAPSHOT</version> <!-- 版本号 -->
-    <name>com.chile Maven Webapp</name> <!-- 显示名字 -->
+    <name>springMVC-template</name> <!-- 显示名字 -->
     <url>http://maven.apache.org</url> <!-- 远程依赖库url -->
 
 
@@ -27,7 +27,7 @@
         <developer.organization><![CDATA[scengine]]></developer.organization>
     </properties>
 
-    <dependencies> <!-- 远程依赖库 -->
+    <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -152,9 +152,9 @@
         </dependency>
         <!--c3p0数据库连接池-->
         <dependency>
-        <groupId>c3p0</groupId>
-        <artifactId>c3p0</artifactId>
-        <version>0.9.1.2</version>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
         </dependency>
 
         <!-- DAO: MyBatis -->
@@ -176,7 +176,7 @@
 
     <!-- 构建项目的最终名称 -->
     <build>
-        <finalName>com.chile</finalName>
+        <finalName>com.chile.springMVC</finalName>
     </build>
 
 
